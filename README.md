@@ -21,3 +21,12 @@ To get started with pytest, follow these steps:
    ```bash
    git clone https://github.com/Goaty-yagi/pytest_practice
    cd pytest_practice
+
+
+## Resources
+[pytest Documentation](https://docs.pytest.org/en/7.1.x/contents.html)<br>
+[Pytest Tutorial – How to Test Python Code](https://www.youtube.com/watch?v=cHYq1MRoyI0)<br>
+
+## Contributing
+Contributions to this repository are welcome! If you find any issues, have suggestions for improvement, or want to add more examples, feel free to open an issue or submit a pull request.
+
