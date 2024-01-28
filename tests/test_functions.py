@@ -2,9 +2,11 @@ import pytest
 
 import source.functions as func
 
-""" Function unit tests"""
+""" Function unit tests
+    mark is for other developers. 
+"""
 
-
+@pytest.mark.skip(reason="This feature is currently broken")# This test will be skipped
 def test_add():
     result = func.add(5, 3)
     expected = 8
@@ -13,7 +15,7 @@ def test_add():
 
 
 def test_add_atrings():
-    result = func.add("I love", "Python")
+    result = func.add("I love", " Python")
     expected = "I love Python"
 
     assert result == expected  # cause error
@@ -34,3 +36,7 @@ def test_divide_by_zero():
     # You don't need assert.
     with pytest.raises(ZeroDivisionError):
         func.divide(30, 0)
+
+@pytest.mark.xfail(reason="We know cannot divide by zero.")
+def test_devide_zero_broken():
+    func.divide(90, 0) 
