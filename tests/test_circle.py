@@ -5,13 +5,15 @@ import pytest
 import source.shapes as shapes
 
 # Prefix of the class should be test.
+
+
 class TestCircle:
 
     def setup_method(self, method):
         """ a method named 'setup_method' run before test. """
 
-        print(f"Setting up {method}") # print with -s flag
-        self.circle = shapes.Circle(10) # Circle obj created
+        print(f"Setting up {method}")  # print with -s flag
+        self.circle = shapes.Circle(10)  # Circle obj created
 
     def teardown_method(self, method):
         """ a method named 'teardown_method' run after test. """
@@ -26,3 +28,8 @@ class TestCircle:
         result = self.circle.perimeter()
         expected = 2 * math.pi * self.circle.radius
         assert result == expected
+
+    def test_not_same_area_rectangle(self, my_rectangle):
+        """ You can access my_rectangle also from here. """
+
+        assert my_rectangle.area() != self.circle.area()
