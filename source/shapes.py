@@ -1,9 +1,10 @@
 import math
+from abc import ABC, abstractmethod
 
 """ Class based testing purpose """
 
 
-class Shape:
+class Shape(ABC):
 
     def area(self):
         pass
